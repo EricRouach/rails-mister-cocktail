@@ -1,1 +1,7 @@
 // Specific CSS for your home-page
+.container {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("https://i.pinimg.com/originals/c5/0f/10/c50f107fdd4aedb40d757e3aaee067cf.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}

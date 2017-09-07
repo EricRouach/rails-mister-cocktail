@@ -1,27 +1,34 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Cocktails</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <h1 class="text-center">Cocktails</h1>
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= cocktail.name %></td>
-        <td><%= link_to 'Show', cocktail %></td>
-        <td><%= link_to 'Edit', edit_cocktail_path(cocktail) %></td>
-        <td><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="col-xs-12 col-sm-3">
+      <!-- insert <div class="card"> -->
+      <div class="card">
+        <%= link_to cocktail do %>
+        <div class="card-body">
+          <div class="card-description">
+            <h2><%=  cocktail.name.upcase %></h2>
+          </div>
+          <span class="category">Popular</span>
+        </div>
+        <% end %>
+        <div class="card-footer">
+          <div class="card-icon">
+            <%= link_to cocktail do %>
+            <i class="fa fa-expand a" aria-hidden="true"></i>
+            <% end %>
+            <%= link_to edit_cocktail_path(cocktail) do %>
+            <i class="fa fa-pencil a" aria-hidden="true"></i>
+            <% end %>
+            <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-trash-o a" aria-hidden="true"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Cocktail', new_cocktail_path %>
+  </div>
+</div>

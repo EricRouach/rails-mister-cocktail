@@ -1,0 +1,58 @@
+/* Your card CSS code here */
+.cards {
+/*  width: 340px;*/
+  display: flex;
+}
+
+.card {
+  flex: 1 1 auto;
+/*  padding: 10px;*/
+  box-shadow: 0px 0px 4px rgb(190,190,190);
+  margin: 10px 10px;
+  transition: all 0.2s ease;
+}
+
+.card-body {
+  height: 160px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');
+  background-size:cover;
+  color: white;
+  position: relative;
+}
+
+.category {
+  position: absolute;
+  font-size: 15px;
+  margin: 9px 11px;
+}
+
+.card-description {
+  position: absolute;
+  margin: 64px 10px;
+  font-size: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px 15px;
+  background: white;
+  color: rgb(190,190,190);
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
+}
+
+.card-icon i {
+  color: rgb(190,190,190);
+  padding: 5px;
+}
+
+.card-icon i:hover {
+  color: rgb(150,150,150);
+  padding: 5px;
+  .a {
+    text-decoration: none;
+  }
+}
+
