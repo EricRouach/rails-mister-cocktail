@@ -10,6 +10,7 @@ class CocktailsController < ApplicationController
   # GET /cocktails/1
   # GET /cocktails/1.json
   def show
+    @doses = Dose.where(cocktail_id: @cocktail.id)
   end
 
   # GET /cocktails/new
