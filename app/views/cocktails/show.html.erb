@@ -1,19 +1,30 @@
 <p id="notice"><%= notice %></p>
+<div class="image">
+<br>
+<h1 class="text-center">Ingredients of the <%= @cocktail.name %></h1>
+<br>
+  <div class="container text-center", style="background: white; opacity: 0.8;">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center" >Ingredients</th>
+          <th style="text-align: center" >Doses</th>
+          <th style="text-align: center" >Remove</th>
+        </tr>
+      </thead>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-  <% @doses.each do |dose| %>
-  <ul>
-    <li>
-      <%= dose.ingredient.name %>
-      (<%= dose.description %>)
-      <%= link_to 'Delete this dose', dose_path(dose.id), method: :delete %>
-    </li>
-  </ul>
-  <% end %>
-</p>
+      <tbody>
+        <% @doses.each do |dose| %>
+        <tr>
+          <td><%= dose.ingredient.name %></td>
+          <td><%= dose.description %></td>
+          <td><%= link_to 'Delete this dose', dose_path(dose.id), method: :delete %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
-<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
-<%= link_to 'Back', cocktails_path %>
+    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: "btn btn-primary button" %>
+    <%= link_to 'Back', cocktails_path, class: "btn btn-warning button" %>
+  </div>
+</div>

@@ -4,6 +4,22 @@
   display: flex;
 }
 
+.plus {
+  background-color: rgb(80,80,80);
+  opacity: 0.7;
+  height: 203px;
+  color: white;
+  position:relative;
+  i {
+    position:absolute;
+    margin: 0px 117px;
+  }
+  &:hover {
+    background-color: rgb(130,130,130);
+    opacity: 0.7;
+  }
+}
+
 .card {
   flex: 1 1 auto;
 /*  padding: 10px;*/

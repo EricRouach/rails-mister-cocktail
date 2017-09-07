@@ -1,34 +1,48 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <h1 class="text-center">Cocktails</h1>
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-4">
-      <!-- insert <div class="card"> -->
-      <div class="card">
-        <%= link_to cocktail do %>
-        <div class="card-body">
-          <div class="card-description">
-            <h2><%=  cocktail.name.upcase %></h2>
+<div class="image">
+  <div class="container">
+    <h1 class="text-center">Cocktails</h1>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card">
+          <%= link_to cocktail do %>
+          <div class="card-body">
+            <div class="card-description">
+              <h2><%=  cocktail.name.upcase %></h2>
+            </div>
+            <span class="category">Popular</span>
           </div>
-          <span class="category">Popular</span>
-        </div>
-        <% end %>
-        <div class="card-footer">
-          <div class="card-icon">
-            <%= link_to cocktail do %>
-            <i class="fa fa-expand a" aria-hidden="true"></i>
-            <% end %>
-            <%= link_to edit_cocktail_path(cocktail) do %>
-            <i class="fa fa-pencil a" aria-hidden="true"></i>
-            <% end %>
-            <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="fa fa-trash-o a" aria-hidden="true"></i>
-            <% end %>
+          <% end %>
+          <div class="card-footer">
+            <div class="card-icon">
+              <%= link_to cocktail do %>
+              <i class="fa fa-expand a" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to edit_cocktail_path(cocktail) do %>
+              <i class="fa fa-pencil a" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-trash-o a" aria-hidden="true"></i>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
+      <% end %>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card">
+          <%= link_to new_cocktail_path do %>
+          <div class="plus">
+            <div class="card-description">
+              <i class="fa fa-plus-square-o fa-5x" aria-hidden="true"></i>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <% end %>
   </div>
 </div>
