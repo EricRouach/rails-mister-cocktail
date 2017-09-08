@@ -27,9 +27,10 @@ class DosesController < ApplicationController
   # POST /doses.json
   def create
     @dose = Dose.new(dose_params)
+    @dose.cocktail = Cocktail.find(params[:cocktail_id])
     respond_to do |format|
       if @dose.save
-        format.html { redirect_to cocktail_path(dose_params[:cocktail_id]), notice: 'Dose was successfully created.' }
+        format.html { redirect_to @dose.cocktail, notice: 'Dose was successfully created.' }
         format.json { render :show, status: :created, location: @dose }
       else
         format.html { render :new }

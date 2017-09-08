@@ -1,13 +1,27 @@
 // Specific CSS for your home-page
 h1 {
   color: white;
+  font-size: 70px;
 }
 
 .image {
   margin-top: -10px;
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("http://www.hifreevideos.com/images/preview/Parchment-Paper-70561.jpg");
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('http://res.cloudinary.com/drwnzkr6m/image/upload/v1504876055/background_s12vpq.jpg');
+  // background-color: rgb(240, 240, 240);
   background-size: cover;
   height: 100%;
   width: 100%;
   padding: 10px 70px 200px 70px;
+}
+
+.new-image {
+  margin-top: -10px;
+  background-image: url('http://www.meltingbutter.com/wp-content/uploads/2015/08/575.Lidkoeb-Copenhagen-meltingbutter.com-Cocktail-Bar-Hotspot5.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 10px 70px 200px 70px;
+  h1 {
+    color: white;
+  }
 }
