@@ -1,51 +1,60 @@
 <div class="image">
-    <div class="container">
-      <h1 class="text-center">Cocktails</h1>
-      <div class="row">
-        <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-12 col-sm-4">
-          <!-- insert <div class="card"> -->
-          <div class="card">
-            <%= link_to cocktail do %>
-            <% if cocktail.photo? %>
-            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-              <% else %>
-              <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');)">
-                <% end %>
-                <div class="card-description">
-                  <h4><%=  truncate(cocktail.name.upcase, length: 20) %></h4>
-                  <p><%= cocktail.nbr_ingredient %> ingredient(s)</p>
-                </div>
-                <span class="category">Popular</span>
-              </div>
+  <div class="banner">
+    <div class="banner-content">
+      <h1>Cocktails</h1>
+      <h3>Find. Share. Enjoy</h3>
+      <a href="#card-id" class="btn btn-primary lg" style="padding: 17px 61px; font-size: 24px;">Start now</a>
+    </div>
+  </div>
+</div>
+<div id="card-id">
+  <div class="container">
+    <h1 class="text-center">My cocktails</h1>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <!-- insert <div class="card"> -->
+        <div class="card">
+          <%= link_to cocktail do %>
+          <% if cocktail.photo? %>
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+            <% else %>
+            <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');)">
               <% end %>
-              <div class="card-footer">
-                <div class="card-icon">
-                  <%= link_to cocktail do %>
-                  <i class="fa fa-expand a" aria-hidden="true"></i>
-                  <% end %>
-                  <%= link_to edit_cocktail_path(cocktail) do %>
-                  <i class="fa fa-pencil a" aria-hidden="true"></i>
-                  <% end %>
-                  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                  <i class="fa fa-trash-o a" aria-hidden="true"></i>
-                  <% end %>
-                </div>
+              <div class="card-description">
+                <h4><%=  truncate(cocktail.name.upcase, length: 20) %></h4>
+                <p><%= cocktail.nbr_ingredient %> ingredient(s)</p>
+              </div>
+              <span class="category">Popular</span>
+            </div>
+            <% end %>
+            <div class="card-footer">
+              <div class="card-icon">
+                <%= link_to cocktail do %>
+                <i class="fa fa-expand a" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to edit_cocktail_path(cocktail) do %>
+                <i class="fa fa-pencil a" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o a" aria-hidden="true"></i>
+                <% end %>
               </div>
             </div>
           </div>
-          <% end %>
-          <div class="col-xs-12 col-sm-4">
-            <!-- insert <div class="card"> -->
-            <div class="card">
-              <%= link_to new_cocktail_path do %>
-              <div class="plus">
-                <i class="fa fa-plus-square-o fa-5x" aria-hidden="true"></i>
-              </div>
-              <% end %>
+        </div>
+        <% end %>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <div class="card">
+            <%= link_to new_cocktail_path do %>
+            <div class="plus">
+              <i class="fa fa-plus-square-o fa-5x" aria-hidden="true"></i>
             </div>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
