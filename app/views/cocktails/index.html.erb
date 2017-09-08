@@ -8,7 +8,7 @@
         <!-- insert <div class="card"> -->
         <div class="card">
           <%= link_to cocktail do %>
-          <div class="card-body">
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @product.photo, height: 300, width: 400, crop: :fill %>')">
             <div class="card-description">
               <h2><%=  cocktail.name.upcase %></h2>
             </div>
@@ -36,9 +36,7 @@
         <div class="card">
           <%= link_to new_cocktail_path do %>
           <div class="plus">
-            <div class="card-description">
-              <i class="fa fa-plus-square-o fa-5x" aria-hidden="true"></i>
-            </div>
+            <i class="fa fa-plus-square-o fa-5x" aria-hidden="true"></i>
           </div>
           <% end %>
         </div>

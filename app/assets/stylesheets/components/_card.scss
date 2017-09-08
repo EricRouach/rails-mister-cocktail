@@ -1,36 +1,75 @@
 /* Your card CSS code here */
 .cards {
 /*  width: 340px;*/
-  display: flex;
+display: flex;
 }
 
-.plus {
-  background-color: rgb(80,80,80);
-  opacity: 0.7;
-  height: 203px;
-  color: white;
-  position:relative;
-  i {
-    position:absolute;
-    margin: 0px 117px;
-  }
-  &:hover {
-    background-color: rgb(130,130,130);
+@media (min-width: 892px) {
+  .plus {
+    background-color: rgb(80,80,80);
     opacity: 0.7;
+    height: 203px;
+    color: white;
+    text-align:center;
+    i {
+      margin-top: 20%;
+    }
+    &:hover {
+      background-color: rgb(130,130,130);
+      opacity: 0.7;
+    }
   }
 }
+
+@media (min-width: 692px) and (max-width: 892px) {
+  .plus {
+    background-color: rgb(80,80,80);
+    opacity: 0.7;
+    height: 203px;
+    color: white;
+    text-align:center;
+    i {
+      margin-top: 34%;
+    }
+    &:hover {
+      background-color: rgb(130,130,130);
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 692px) {
+  .plus {
+    background-color: rgb(80,80,80);
+    opacity: 0.7;
+    height: 203px;
+    color: white;
+    text-align:center;
+    i {
+      margin-top: 13%;
+    }
+    &:hover {
+      background-color: rgb(130,130,130);
+      opacity: 0.7;
+    }
+  }
+}
+
+
 
 .card {
   flex: 1 1 auto;
 /*  padding: 10px;*/
-  box-shadow: 0px 0px 4px rgb(190,190,190);
-  margin: 20px 20px;
-  transition: all 0.2s ease;
+box-shadow: 0px 0px 4px rgb(190,190,190);
+margin: 20px 20px;
+transition: all 0.2s ease;
+  overflow: auto;
+
 }
 
 .card-body {
   height: 160px;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');
   background-size:cover;
   color: white;
   position: relative;
