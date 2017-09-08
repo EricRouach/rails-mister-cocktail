@@ -73,6 +73,9 @@ display: flex;
   background-size:cover;
   color: white;
   position: relative;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .category {
