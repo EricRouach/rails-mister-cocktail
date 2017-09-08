@@ -13,7 +13,7 @@
               <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://z65ovrxjio4asccx3admgs10-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2015/09/Cocktail-Bar.jpg');)">
                 <% end %>
                 <div class="card-description">
-                  <h4><%=  cocktail.name.upcase %></h4>
+                  <h4><%=  truncate(cocktail.name.upcase, length: 20) %></h4>
                   <p><%= cocktail.nbr_ingredient %> ingredient(s)</p>
                 </div>
                 <span class="category">Popular</span>
