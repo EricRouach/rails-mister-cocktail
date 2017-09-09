@@ -8,11 +8,11 @@ display: flex;
   .plus {
     background-color: rgb(80,80,80);
     opacity: 0.7;
-    height: 276px;
+    height: 291px;
     color: white;
     text-align:center;
     i {
-      margin-top: 29%;
+      margin-top: 32%;
     }
     &:hover {
       background-color: rgb(130,130,130);
@@ -25,7 +25,7 @@ display: flex;
   .plus {
     background-color: rgb(80,80,80);
     opacity: 0.7;
-    height: 276px;
+    height: 294px;
     color: white;
     text-align:center;
     i {
@@ -46,7 +46,7 @@ display: flex;
     color: white;
     text-align:center;
     i {
-      margin-top: 26%;
+      margin-top: 19%;
     }
     &:hover {
       background-color: rgb(130,130,130);
@@ -94,7 +94,7 @@ display: flex;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 15px;
+  padding: -7px 18px;
   background: white;
   color: rgb(190,190,190);
   font-family: 'Open Sans Condensed', sans-serif;
@@ -124,5 +124,52 @@ display: flex;
   .new-body {
     margin-bottom: 50px;
   }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+/* Body design */
+.product-body {
+  flex: 1 1 auto;
+}
+.product-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.product-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* Upvote design */
+.product-upvote {
+  padding-left: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.product-count {
+  margin: 2px 0 0;
+}
+.product-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
 }
 

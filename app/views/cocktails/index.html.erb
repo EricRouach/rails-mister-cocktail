@@ -40,6 +40,16 @@
                 <i class="fa fa-trash-o a" aria-hidden="true"></i>
                 <% end %>
               </div>
+              <div class="product">
+                <div class='product-body'>
+                  <h5>Votes</h5>
+                </div>
+                <div class='product-upvote'>
+                <%= raise %>
+                  <div class="product-arrow"></div>
+                  <div class='product-count'><%= cocktail.vote %></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -58,3 +68,12 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  $(document).ready(function(){
+    $('.product-upvote').click(function(event){
+      this.add_vote;
+    });
+  });
+</script>
